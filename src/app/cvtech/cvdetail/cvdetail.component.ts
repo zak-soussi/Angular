@@ -1,5 +1,7 @@
 import {Component, Input} from '@angular/core';
 import {Person} from "../../Model/Person";
+import {EmbaucherService} from "../embaucher.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-cvdetail',
@@ -9,4 +11,14 @@ import {Person} from "../../Model/Person";
 export class CvdetailComponent {
   @Input()
   personne : Person = new Person();
+  constructor(private embaucheservice : EmbaucherService , private route : Router) {
+  }
+  embaucher(){
+    this.embaucheservice.embaucherPersonne(this.personne);
+  }
+
+  getmoreinfo(){
+    this.route.navigate(['cv/detail',this.personne.id]);
+  }
+
 }

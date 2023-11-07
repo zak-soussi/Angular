@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-color',
@@ -11,8 +12,15 @@ export class ColorComponent {
     this.color = textdata.value
     textdata.value = ''
   }
+  constructor(private router : Router) {
+  }
 
+  gotocvTech(){
+    this.router.navigate(['cv']);
+  }
   processdata(msg: any) {
     alert(msg)
   }
+
+
 }
