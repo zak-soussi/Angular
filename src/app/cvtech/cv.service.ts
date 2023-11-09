@@ -28,4 +28,13 @@ export class CvService {
     if(personne)
       return personne;
   }
+  addPersonne(personne : Person){
+    personne.id = this.personnes.length + 1;
+    this.personnes.push(personne);
+  }
+
+  deletePersonne(item : Person){
+    let index = this.personnes.indexOf(item);
+    this.personnes.splice(index,1);
+  }
 }

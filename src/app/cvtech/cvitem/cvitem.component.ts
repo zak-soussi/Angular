@@ -11,6 +11,8 @@ export class CvitemComponent {
   personne : Person = new Person();
   @Output()
   sendedperson = new EventEmitter();
+  @Input()
+  bgintcolor:number = 0;
 
 
   sendperson(){

@@ -1,5 +1,5 @@
 
-<ol class="list-group" *ngFor="let cv of personnes">
-  <app-cvitem (sendedperson)="sendperson($event)" [personne]="cv"/>
+<ol class="list-group" *ngFor="let cv of personnes , let i = index">
+  <app-cvitem [bgintcolor]="i" (sendedperson)="sendperson($event)" [personne]="cv"/>
 </ol>
 

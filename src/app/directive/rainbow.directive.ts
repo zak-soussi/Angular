@@ -7,18 +7,14 @@ export class RainbowDirective {
 
   colors = [
     'blue',
-    "lightblue",
-    'coral',
+    "brown",
+    'yellow',
     'pink',
-    'green’',
-    'lightyellow',
-    'lightgreen',
-    'gold',
+    'green',
+    'purple',
     'gray',
-    'lightgray',
-    'purple'
 ]
-  @HostBinding('style.color') color = 'red';
+  @HostBinding('style.color') color = 'green';
   @HostBinding('style.borderColor') bcolor = 'yellow'
   constructor() { }
   @HostListener('keypress') change(){

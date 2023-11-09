@@ -7,10 +7,13 @@ import { Component } from '@angular/core';
 })
 export class MystyleComponent {
  color  = "red";
- bgcolor = 'yellow';
+ font = 'arial';
  size = '15px';
 
  sizechanged(val : string){
     this.size = val + 'px';
+ }
+ selectedfont(font : HTMLSelectElement){
+   this.font = font.value;
  }
 }

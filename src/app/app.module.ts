@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { ColorComponent } from './color/color.component';
 import {FormsModule} from "@angular/forms";
-import { FilsComponent } from './fils/fils.component';
 import { CvComponent } from './cvtech/cv/cv.component';
 import { CvdetailComponent } from './cvtech/cvdetail/cvdetail.component';
 import { CvlistComponent } from './cvtech/cvlist/cvlist.component';
@@ -17,12 +15,12 @@ import {ROUTING} from "./app.routing";
 import { NavbarComponent } from './navbar/navbar.component';
 import { DetailComponent } from './cvtech/detail/detail.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { AddComponent } from './cvtech/add/add.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ColorComponent,
-    FilsComponent,
     CvComponent,
     CvdetailComponent,
     CvlistComponent,
@@ -33,7 +31,9 @@ import { NotfoundComponent } from './notfound/notfound.component';
     EmbaucheComponent,
     NavbarComponent,
     DetailComponent,
-    NotfoundComponent
+    NotfoundComponent,
+    AddComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
