@@ -17,6 +17,9 @@ import { DetailComponent } from './cvtech/detail/detail.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { AddComponent } from './cvtech/add/add.component';
 import { LoginComponent } from './login/login.component';
+import { SliderComponent } from './slider/slider.component';
+import { HttpComponent } from './http/http.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -33,12 +36,15 @@ import { LoginComponent } from './login/login.component';
     DetailComponent,
     NotfoundComponent,
     AddComponent,
-    LoginComponent
+    LoginComponent,
+    SliderComponent,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ROUTING
+    ROUTING,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,6 +5,6 @@
   <label for="pwd">Password</label>
   <input id="pwd" required minlength="4" type="text" ngModel name="password" class="form-control" #pwdmodel="ngModel">
   <div class="alert alert-danger" *ngIf="(pwdmodel.invalid && pwdmodel.touched)">Votre mot de passe doit avoir au moins 4 caractères.</div>
-  <button class="btn btn-primary" [disabled]="loginformulaire.invalid" (click)="login(loginformulaire)">Envoyer</button>
+  <button class="btn btn-success" [disabled]="loginformulaire.invalid" (click)="login(loginformulaire)">Login</button>
 </form>
 

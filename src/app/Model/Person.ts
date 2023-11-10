@@ -4,16 +4,16 @@ export class Person {
   firstname: string;
   age: number;
   path: string;
-  description: string;
+  cin: number;
   job: string;
 
-  constructor(id: number = 0, name: string = "try", firstname: string = "me", age: number = 90, path: string = "", description: string = "", job: string = "nothing") {
+  constructor(id: number = 0, name: string = "try", firstname: string = "me", age: number = 90, path: string = "", cin: number = 0 , job: string = "nothing") {
     this.id = id;
     this.name = name;
     this.firstname = firstname;
     this.age = age;
     this.path = path;
-    this.description = description;
+    this.cin = cin;
     this.job = job;
   }
 }

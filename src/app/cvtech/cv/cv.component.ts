@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {Person} from "../../Model/Person";
 import {CvService} from "../cv.service";
 
@@ -8,10 +8,23 @@ import {CvService} from "../cv.service";
   styleUrls: ['./cv.component.css']
 })
 export class CvComponent {
-  constructor(private cvserivce : CvService) {
-  }
-    personnes : Person [] = this.cvserivce.getPersonnes();
+  cvservice : CvService = inject(CvService)
+  constructor() {
+    this.cvservice.getPersonnes().subscribe(
+      (item)=>{
+        this.personnes = item;
+        this.cvservice.setterPersonnes(this.personnes);
+      },
+    (error)=>{
+        alert("Connexion a l'API à échouer, c'est pourquoi on affiche fake data ");
+        this.personnes = this.cvservice.getFakePersonnes();
+      this.cvservice.setterPersonnes(this.personnes);
+    }
+    )
 
+
+  }
+    personnes : Person[] = []
     personne : any = false;
 
     sendperson(item : Person){

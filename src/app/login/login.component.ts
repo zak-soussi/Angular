@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {Router} from "@angular/router";
 
@@ -8,8 +8,9 @@ import {Router} from "@angular/router";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-    constructor(private router : Router) {
+    constructor() {
     }
+    router : Router = inject(Router);
     login(formulaire : NgForm){
       this.router.navigate(['cv'])
     }

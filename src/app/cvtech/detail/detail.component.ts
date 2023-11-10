@@ -16,6 +16,8 @@ export class DetailComponent {
     this.activerouter.params.subscribe(
       (params) => {
         this.personne = this.cvservice.getPersonneById(params['id']);
+        if(!this.personne)
+          this.router.navigate(['notfound']);
       }
     );
   }
