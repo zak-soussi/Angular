@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, inject, Input} from '@angular/core';
 import {Person} from "../../Model/Person";
 import {EmbaucherService} from "../embaucher.service";
 import {Router} from "@angular/router";
@@ -11,8 +11,10 @@ import {Router} from "@angular/router";
 export class CvdetailComponent {
   @Input()
   personne : Person = new Person();
-  constructor(private embaucheservice : EmbaucherService , private route : Router) {
+  constructor() {
   }
+  embaucheservice = inject(EmbaucherService)
+  route = inject(Router)
   embaucher(){
     this.embaucheservice.embaucherPersonne(this.personne);
   }
